@@ -1,0 +1,126 @@
+/*  CSS @import Rule - https://www.w3schools.com/cssref/pr_import_rule.asp
+    Google Font - https://fonts.google.com/
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+.poster {
+  width: 80%;
+  color: white;
+  text-align: center;
+  margin: 2% auto;
+  padding: 2% 5%;
+  border: 2px solid white;
+}
+.poster .thumbnail {
+  display: block;
+  margin: 0 auto;
+  width: 33%;
+  max-width: 250px;
+  min-width: 100px;
+}
+.poster .slogan {
+  font-size: 8em;
+  /* font-size: 22vw; */
+  text-transform: uppercase;
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+}
+.poster .slogan span {
+  display: block;
+  font-size: 0.5em;
+}
+
+.hero {
+  color: red;
+/*   CSS Box Model */
+  pading: 10% 5%;
+/*   height: 50vh; */
+}
+.hero h1 {
+  color: yellow;
+}
+
+/* CSS Flexbox Style Rules */
+.no-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cssflexbox {
+  padding: 0 5%;
+}
+.cssflexbox .header {
+  display: flex;
+/*   flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: yellow;
+}
+.header .logo {
+  width: 100px;
+  display: block;
+}
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0; 
+  background: deepskyblue;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #1565C0;
+}
+
+.flexboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Lato', sans-serif;  
+}
+.flexboxes .box {
+  padding-right: 1em;
+  flex: 1 auto;
+}
+.flexboxes .box:last-child {
+  padding-right: 0;
+}
+
+.flexboxes h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* NOTE: Detect Medium screens 
+  Understanding Media Types - https://www.w3schools.com/css/css3_mediaqueries.asp
+*/
+
+@media all and (max-width: 736px) {
+  .flexboxes {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
